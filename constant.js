@@ -1,3 +1,5 @@
+export const LINKEDIN_URL = "https://www.linkedin.com/in/mahak-k-100971232/";
+
 export const IMG_CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 

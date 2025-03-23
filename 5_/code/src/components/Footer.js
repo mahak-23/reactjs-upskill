@@ -1,4 +1,5 @@
 import React from "react";
+import { LINKEDIN_URL } from "../../../../constant";
 
 const Footer = () => {
   const currentYear = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
   return (
     <div className="footer">
       Created By<span>❤️</span>
-      <a href="https://www.linkedin.com/in/mahak-k-100971232/" target="_blank">
+      <a href={LINKEDIN_URL} target="_blank">
         Mahak Kushwaha
       </a>
-      <span>©</span>
+      <span>&copy;</span>
       {currentYear()}
       <span className="app-name">Dine Out</span>
     </div>
