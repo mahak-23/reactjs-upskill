@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { restaurantList } from "../../../../constant";
+import { DummyRestaurantList} from "../../../../assets/constant";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
@@ -33,8 +33,8 @@ const Body = () => {
       </div>
 
       <div className="restaurant-container">
-        {filterRestaurants([...restaurantList]).length > 0 ? (
-          filterRestaurants([...restaurantList]).map((restaurant) => (
+        {filterRestaurants([...DummyRestaurantList]).length > 0 ? (
+          filterRestaurants([...DummyRestaurantList]).map((restaurant) => (
             <RestaurantCard restaurantData={restaurant.data} />
           ))
         ) : (

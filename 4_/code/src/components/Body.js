@@ -1,5 +1,5 @@
 import React from "react";
-import { restaurantList } from "../../../../constant";
+import { DummyRestaurantList} from "../../../../assets/constant";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
@@ -11,7 +11,7 @@ const Body = () => {
       </div>
 
       <div className="restaurant-container">
-        {restaurantList.map((restaurant) => (
+        {DummyRestaurantList.map((restaurant) => (
           <RestaurantCard restaurantData={restaurant.data} />
         ))}
       </div>
