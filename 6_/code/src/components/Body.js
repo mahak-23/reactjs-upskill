@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  SWIGGY_API_URL,
-  DummyRestaurantList,
-} from "../../../../assets/constant.js";
+import { SWIGGY_API_URL } from "../../../../assets/constant.js";
+import { UpdatedDummy } from "../utils/hardcodeData.js";
+import { IoIosClose } from "react-icons/io";
 
 // child components
 import RestaurantCard from "./RestaurantCard";
@@ -28,8 +27,8 @@ const Body = () => {
       setFilteredRestaurants(restaurants);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setRestaurantList(DummyRestaurantList);
-      setFilteredRestaurants(DummyRestaurantList);
+      setRestaurantList(UpdatedDummy);
+      setFilteredRestaurants(UpdatedDummy);
     } finally {
       setLoader(false);
     }
@@ -46,9 +45,9 @@ const Body = () => {
   const filterRestaurants = () =>
     restaurantList.filter(
       (rest) =>
-        rest.data.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        rest.data.area.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        rest.data.cuisines
+        rest.info.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        rest.info.areaName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        rest.info.cuisines
           .join(", ")
           .toLowerCase()
           .includes(searchTerm.toLowerCase())
@@ -72,12 +71,12 @@ const Body = () => {
         <input
           value={searchTerm}
           onChange={handleSearchValue}
-          placeholder="Search Restaurant..."
+          placeholder="Search Restaurant Name, Area, Cuisines..."
           title="Search Restaurant"
         />
         {searchTerm && (
           <span className="search-icon" onClick={clearSearch}>
-            ✖
+            <IoIosClose />
           </span>
         )}
         <span className="search-icon" onClick={handleSearch}>
@@ -86,12 +85,12 @@ const Body = () => {
       </div>
 
       <div className="restaurant-container">
-        {restaurantList.length > 0 ? (
+        {restaurantList && restaurantList.length > 0 ? (
           filteredRestaurants.length > 0 ? (
             filteredRestaurants.map((restaurant) => (
               <RestaurantCard
-                key={restaurant.data.id}
-                restaurantData={restaurant.data}
+                key={restaurant.info.id}
+                restaurantData={restaurant.info}
               />
             ))
           ) : (
