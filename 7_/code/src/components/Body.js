@@ -25,7 +25,6 @@ const Body = () => {
 
       setRestaurantList(restaurants);
       setFilteredRestaurants(restaurants);
-      console.log(restaurants.slice(0, 7))
 
     } catch (error) {
       console.error("Error fetching data:", error);

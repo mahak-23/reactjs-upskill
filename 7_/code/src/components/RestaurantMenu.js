@@ -45,8 +45,6 @@ const RestaurantMenu = () => {
   let itemCards =
     cards.find((c) => c?.card?.card?.itemCards)?.card?.card?.itemCards || [];
 
-    console.log(cards, itemCards, cards.find((c) => c?.card?.card?.itemCards))
-
   return loader ? (
     <Shimmer type="menu" />
   ) : (
