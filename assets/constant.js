@@ -14,6 +14,19 @@ export const SWIGGY_REST_API_PATH = `data?.cards[1]?.card?.card?.gridElements?.i
 
 // Social Media Links - URL
 export const LINKEDIN_URL = "https://www.linkedin.com/in/mahak-k-100971232/";
+export const GiTHUB_LINK = "https://github.com/mahak-23";
+export const EMAIL_LINK = "mailto:mahak1923k@gmal.com";
+
+
+// Github - username and repository name
+export const GITHUB_USERNAME = "mahak-23";
+export const GITHUB_REPOSITORY_NAME = "upskilling";
+
+// Github API for User
+export const GITHUB_USER_API = "https://api.github.com/users/";
+
+// Github API for Repository
+export const GITHUB_REPO_API = "https://api.github.com/repos/";
 
 export const DummyRestaurantList = [
   {
