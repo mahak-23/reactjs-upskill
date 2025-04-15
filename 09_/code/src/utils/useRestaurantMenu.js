@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FETCH_MENU_URL } from "../../../../assets/constant";
+import { FETCH_MENU_URL } from "../../../../assets/constant.js";
 import { UpdatedDummyMenus } from "./hardcodeData.js";
 
 const useRestaurantMenu = (resId) => {
