@@ -1,0 +1,652 @@
+body {
+    font-family: Gilroy, arial, Helvetica Neue, sans-serif;
+    letter-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    height: calc(100vh - 90px);
+    width: 100%;
+    margin-top: 80px;
+    background-color: #f1f1f1;
+}
+
+.shimmer-element {
+    background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+/* CSS for scroll-bar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    color: #ff8c00;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff8c00;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #828080;
+}
+
+/*Body*/
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    min-height: calc(100vh - 139px);
+}
+
+.filters {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-box {
+    background-color: #fff;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+        rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.search-box>input {
+    height: 40px;
+    padding: 0px 10px;
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-icon {
+    color: #828080;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+}
+
+.search-icon:hover {
+    background-color: #ddd;
+}
+
+.restaurant-container {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2%;
+    row-gap: 20px;
+}
+
+.restaurant-card {
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    transform: scale(0.99);
+}
+
+.search {
+    padding: 10px;
+}
+
+.restaurant-logo {
+    width: 100%;
+    height: 65%;
+    margin: 0px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.restaurant-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.restaurant-details {
+    height: fit-content;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.esa-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cousine,
+.location {
+    color: #828080;
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    color: crimson;
+}
+
+/* Footer */
+.footer {
+    width: auto;
+    text-align: center;
+    padding: 16px;
+    background-color: #ff8c00;
+    box-shadow: 0 0 10px #d8d7d71a;
+    color: #fff;
+}
+
+.footer>span {
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.app-name {
+    font-weight: 600;
+    font-style: italic;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Error */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 20px 10px;
+}
+
+.error-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.error-back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.error-back-home>.link-name {
+    padding: 10px;
+    background-color: #e46f20;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.error-back-home>.link-name:hover {
+    background-color: #ff8c00;
+    transition: 0.3s;
+}
+
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.login-container .login-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .form-field {
+    margin-bottom: 15px;
+}
+
+.login-container .form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.login-container .form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container .login-form button {
+    width: 100%;
+    padding: 10px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container .login-form button:hover {
+    background: #e46f20;
+}
+
+.login-container .login-form .error {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Restaurant Menu */
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    min-height: calc(100vh - 139px);
+}
+
+.menu {
+    width: 60%;
+}
+
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.restaurant-header img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin-right: 40px;
+}
+
+.restaurant-header-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.restaurant-header-details h1 {
+    font-size: 20px;
+}
+
+.restaurant-header h3 {
+    color: #bcbcbc;
+}
+
+.restaurant-header p {
+    font-size: 15px;
+    color: rgb(193, 185, 185);
+}
+
+.rating-time {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items {
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+}
+
+.menu-items .left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left .rating span {
+    color: rgb(72, 71, 71);
+}
+
+.menu-items .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-items .right img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right .add-btn {
+    background-color: white;
+    color: #ff8c00;
+    padding: 8px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    bottom: 10px;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.right .add-btn:hover {
+    background-color: #ff8c00;
+    color: white;
+    transition: 0.3s;
+}
+
+.shimmer-menu-item {
+    background-color: #d7d6d6;
+    height: 200px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.shimmer-title {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.shimmer-subtitle {
+    width: 150px;
+    height: 14px;
+    margin-bottom: 10px;
+}
+
+.shimmer-description {
+    width: 100%;
+    height: 14px;
+    margin-bottom: 10px;
+}
+
+.shimmer-rating {
+    width: 100px;
+    height: 16px;
+}
+
+.shimmer-image {
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.shimmer-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+/* Profile */
+.user-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    background: #fff;
+    padding: 32px 48px;
+    border-radius: 16px;
+    min-height: 320px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.left-profile {
+    min-width: 280px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+}
+
+.left-profile a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-pic {
+    border: 3px solid #ccc;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    border-color: #007acc;
+}
+
+.left-profile a h2 {
+    font-size: 20px;
+    color: #007acc;
+    font-weight: 600;
+}
+
+.profile-user-bio {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.4;
+    max-width: 260px;
+}
+
+.repo-name {
+    color: #007acc;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.repo-name:hover {
+    text-decoration: underline;
+}
+
+.right-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-profile>div:first-child {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chip {
+    background-color: #e6f4ff;
+    color: #005a9e;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 90, 158, 0.2);
+}
+
+/* Social Media */
+.social-media-container {
+    display: flex;
+    gap: 16px;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+/* Platform-specific colors */
+.linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.github {
+    background-color: #24292e;
+    color: white;
+}
+
+.email {
+    background-color: #d14836;
+    color: white;
+}
