@@ -31,7 +31,7 @@ const Body = () => {
       setRestaurantList(restaurants);
       setFilteredRestaurants(restaurants);
     } catch (error) {
-      debugger;
+      // debugger;
       if (
         error instanceof TypeError &&
         error.message.includes("Failed to fetch")
