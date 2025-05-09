@@ -21,3 +21,16 @@ public/
        assignment.md  
        notes.md
 ```
+---
+- 📚 01 - Inception
+- 📚 02 - Igniting our App
+- 📚 03 - Laying the Foundation
+- 📚 04 - react JSX Works
+- 📚 05 - Let's get Hooked!
+- 📚 06 - React Concepts and Microservices
+- 📚 07 - React Routing and Hooks
+- 📚 08 - React: Class-based
+- 📚 09 - Optimizing our App (Custom Hooks, Single Responsibility Principle & Code Optimization)
+- 📚 10 - Tailwind CSS
+- 📚 11 - Data States
+- 📚 12 - Redux Toolkit 
